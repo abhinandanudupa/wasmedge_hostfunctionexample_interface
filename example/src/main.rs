@@ -1,13 +1,16 @@
 use wasmedge_hostfunctionexample_interface::*;
 
 fn main() {
-    set_class_id(123);
-    set_class_name("WasmEdge");
-    let mut num: u32 = add_student("Alice");
-    println!("After adding Alice, num = {:?}", num);
-    num = add_student("Fred");
-    println!("After adding Fred, num = {:?}", num);
-    num = add_student("Terry");
-    println!("After adding Terry, num = {:?}", num);
+    println!("Initialising an vector with {:?} randomn numbers.", 10u32);
+    initialise(10u32);
+
+    // println!("Here is the vector:");
+    print();
+
+    println!("\nSorting the vector using insertion sort...");
+    sort();
+    println!("\nSorting finished.");
+
+    println!("\nThe sorted vector is:");
     print();
 }
